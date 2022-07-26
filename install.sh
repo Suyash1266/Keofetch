@@ -61,13 +61,13 @@ if [ ! -x "$(command -v neofetch)" ]; then
 fi
 
 # copy keofetch.sh to /usr/local/bin
-cp keofetch.sh /usr/local/bin/keofetch
+sudo cp keofetch.sh /usr/local/bin/keofetch
 
 # make keofetch executable
-chmod +x /usr/local/bin/keofetch
+sudo chmod +x /usr/local/bin/keofetch
 
 if (command -v keofetch); then
     echo "Successfully installed keofetch!"
 else
-    echo "Unable to install keofetch!"
+    echo "Unable to install keofetch! In case of brew, make sure that the brew packages are on the path"
 fi
